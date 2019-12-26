@@ -5,14 +5,14 @@ sudo apt-get install python3-pip # install pip
 *arp -a  # cmd windows command
 *python .show() , .summary() # show mini information
 *Linux - service apache2 start # Start webiste on linux 
+*Regex/pythex - Website to find regex - import re
+
+
 ------------------------------------------------------------------------------------
 *ARP SPOOF*
 *Linux - echo 1 > /proc/sys/net/ipv4/ip_forward = enbale packets flow
 *Linux - route -n # get router information
 -------------------------------------------------------------------------------------
-
-
-
 
 ----------------------------------------------------------------------------------------------
 *DNS_spoofer*
