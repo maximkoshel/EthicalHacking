@@ -1,0 +1,40 @@
+sudo apt-get remove python3-pip # remove pip to reinstall
+sudo apt-get install python3-pip # install pip
+
+
+*arp -a  # cmd windows command
+*python .show() , .summary() # show mini information
+*Linux - service apache2 start # Start webiste on linux 
+------------------------------------------------------------------------------------
+*ARP SPOOF*
+*Linux - echo 1 > /proc/sys/net/ipv4/ip_forward = enbale packets flow
+*Linux - route -n # get router information
+-------------------------------------------------------------------------------------
+
+
+
+
+----------------------------------------------------------------------------------------------
+*DNS_spoofer*
+First you will need to be the man in the middle and then only dns spoof and not forget to ip forward command
+
+
+*Linux - iptables -I FORWARD -j NFQUEUE --queue-num 0 # Trap packets in queue,0 works when man in the middle
+1.*Linux - iptables -I OUTPUT  -j NFQUEUE --queue-num 0 # trap packets outputing for testing in my machine
+2.*Linux - iptables -I INPUT   -j NFQUEUE --queue-num 0 # trap packets inputing for testing in my machine
+*Linux - iptables --flush
+*Linux - ping -c 1 www.example.com # Sends one signal and get IP of website
+
+# to install NetfilterQueue #
+---- pip install NFQP3 fixed all my problems ----
+sudo apt upgrade gcc
+sudo apt-get install libpq-dev python-dev
+install python-dev-tools 
+apt-get install build-essential python-dev libnetfilter-queue-dev 
+sudo pip install -U setuptools
+
+sudo apt-get install python3 python-dev python3-dev \
+     build-essential libssl-dev libffi-dev \
+     libxml2-dev libxslt1-dev zlib1g-dev \
+     python-pip
+-----------------------------------------------------------------------------------------------
